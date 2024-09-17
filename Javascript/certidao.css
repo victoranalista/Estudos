@@ -1,0 +1,57 @@
+/* Reset básico para remover margens e espaçamentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    padding: 20px;
+}
+
+.certidao-container {
+    max-width: 21cm; /* Largura A4 */
+    margin: auto;
+    padding: 2cm;
+    background: white;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.certidao-header {
+    text-align: center;
+    margin-bottom: 2cm;
+}
+
+.certidao-header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.certidao-info p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.certidao-body {
+    margin-bottom: 2cm;
+}
+
+.certidao-dados {
+    font-size: 16px;
+}
+
+.certidao-dados p {
+    margin: 10px 0;
+}
+
+.certidao-footer {
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #000;
+    padding-top: 10px;
+    margin-top: 20px;
+}

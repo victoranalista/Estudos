@@ -1,0 +1,272 @@
+h2 {
+    font-family: "Mulish";
+    font-weight: 700;
+    font-size: 24px;
+    color: #252733;
+    position: absolute;
+    height: 44px;
+    left: 280px;
+    right: 38px;
+    top: 30px;
+    text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.22);
+}
+
+.usuario {
+    position: absolute;
+    width: 180px;
+    height: 44px;
+    left: 1176px;
+    top: 60px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: 0.2px;
+}
+
+body{
+    background-color: #F5F8FA;
+}
+
+.bemVindo {
+    position: absolute;
+    width: 981px;
+    height: 77px;
+    left: 295px;
+    top: 202px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+hr {
+    position: absolute;
+    width: 952.5px;
+    height: 0px;
+    left: 294px;
+    top: 227px;
+    border: 1px solid #617480;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: inside;
+}
+
+.marcarPonto {
+    font-family: 'Mulish';
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 30px;
+    padding-left: 0px;
+    margin: 20px;
+    position: absolute;
+    width: 1120px;
+    height: 210px;
+    left: 280px;
+    top: 258px;
+    transition: all 0.3s ease-out;
+    background-color: white;
+}
+
+.marcarInfo {
+    text-align: left;
+    margin-left: 0px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+h3{
+    width: 188px;
+    height: 38px;
+    left: 312px;
+    top: 280px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+}
+
+.button {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 0px;
+    padding-left: 30px;
+    left: 1093px;
+    top: 369px;
+    background: #36B336;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+#botaoMarcar {
+    width: 190px;
+    height: 80px;
+    font-family: 'Mulish';
+    font-style: normal;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FCFDFF;
+    list-style: none;
+    text-decoration: none; 
+}
+
+.horario {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    height: 60px;
+}
+
+.barraLateral{
+    margin-left: 0px;
+    background-color: #29445B;
+    list-style: none;
+    position: absolute;
+    width: 278px;
+    height: 1298px;
+    left: -24px;
+    top: 0px;
+    list-style: none;
+}
+
+#menu{
+    margin: 0;
+    padding: 0;
+    margin-left: 0px;
+    margin-top: 12px;
+    list-style: none;
+    background-color: #29445B;
+    color: white;
+    width: 278px;
+}
+
+thead {
+    text-decoration: none; 
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    height: 60px;
+    color: #617480;
+    list-style: none;
+}
+
+th {
+    background-color: #0e2936;
+}
+
+td {
+    background-color: #A4A6B3;
+}
+#outraPagina {
+    text-decoration: none;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    height: 60px;
+    color: #617480;
+    list-style: none;
+}
+
+#paginaAtual {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: white;
+    list-style: none;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+    #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}

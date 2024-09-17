@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style> body { background-image: linear-gradient( white, blue, black); } </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="circustânciaponto.css">
+    <link rel="stylesheet" href="circuntânciaponto_ind.html">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="login.html">
+    <link rel="stylesheet" href="portaldocolaborador.css">
+    <link rel="stylesheet" href="portaldocolaborador.html">
+    <link rel="stylesheet" href="initMap.js">
+<link rel="stylesheet" href="script.py">
+<link rel="stylesheet" href="common.css">
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+		jQuery(window).load(function($){
+			atualizaRelogio();
+		});
+    </script>
+    <title>Ponto Moderno</title>
+</head>
+<body>
+    <h2>Portal do Colaborador</h2>
+    <div class="usuario">
+        Nome do Colaborador
+    </div>
+    <div class="bemVindo">Seja bem-vindo a plataforma da facilidade</div>
+    <hr>
+    <div class="mostrarFolhaPonto">
+        <div class="row">
+            <iframe src="arquivos/folha.pdf"></iframe>
+        </div>
+    </div>
+    
+    <!-- Barra Lateral-->
+
+    <div class="barraLateral">
+        <div>
+            <!-- Foto da lateral-->
+
+            <img src="antique-clock-face_1258-270516.avif" align="right" width="250" height="290">
+        </div>
+
+        
+        <table cellpadding="15px" id="menu">
+            <thead>
+                <tr>
+                    <th><a id="gestaoDePonto"> Ponto Moderno</a></th>
+                </tr>
+            </thead>
+            <tr>
+                <td><a id="outraPagina" href="portaldocolaborador.html">><i class='far fa-address-card' style='font-size:24px'></i><img src="_37816155-05b0-4625-b328-105fe648026c.jpeg" align="center" width="25" height="25">   Registro de Ponto</a></td>
+            </tr
+            <tr>
+                <td><a id="outraPagina" href="index2.html"><i > Justificar o Ponto</i></td>
+            </tr>
+            <tr>
+                <td><a id="paginaAtual"></i><img src="relogio.png"   align="center" width="25" height="25">   Relátorio de Ponto Mensal</a> </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

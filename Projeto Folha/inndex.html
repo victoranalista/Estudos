@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="index2.html">
+
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+		jQuery(window).load(function($){
+			atualizaRelogio();
+		});
+    </script>
+    <title>Portal do Colaborador</title>
+</head>
+<body>
+    <h2>Portal do Colaborador</h2>
+    <div class="usuario">
+        Nome do Colaborador
+    </div>
+    <div class="bemVindo">Bem Vindo!</div>
+    <hr>
+    <div class="mostrarFolhaPonto">
+        <div class="row">
+            <iframe src="arquivos/folha.pdf"></iframe>
+        </div>
+    </div>
+    <div class="barraLateral">
+        <div>
+            <img src="imagens/meeting.png" align="right" width="250" height="290">
+        </div>
+        <table cellpadding="15px" id="menu">
+            <thead>
+                <tr>
+                    <th><a id="gestaoDePonto">Gestão de Ponto</a></th>
+                </tr>
+            </thead>
+            <tr>
+                <td><a id="outraPagina" href="portalDoColaborador.html">><i class='far fa-address-card' style='font-size:24px'></i><img src="imagens/employees.png" align="center" width="25" height="25">   Marcar o Ponto</a></td>
+            </tr>
+            <tr>
+                <td><a id="outraPagina" href="justificarPonto.html"></i><img src="imagens/employees.png" align="center" width="25" height="25">   Justificar o Ponto</a></td>
+            </tr>
+            <tr>
+                <td><a id="paginaAtual"></i><img src="imagens/employees.png" align="center" width="25" height="25">   Folha Mensal</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

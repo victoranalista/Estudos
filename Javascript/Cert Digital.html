@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar Certidão Digital</title>
+    <link rel="stylesheet" href="assinador.py">
+    <style rel="stylesheet" type="text/css">
+        .banner {
+            background-color: #000;
+            font-family: "Courier", monospace;
+            font-weight: bold;
+            font-size: 0;
+        }
+        
+        .bannerCursor {
+            animation: color-change 1.5s step-start infinite;
+        }
+        
+        @keyframes color-change {
+            50% { opacity: 0; }
+        }
+    </style>
+    <style>
+        body { 
+            
+        }
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        label { display: block; margin-bottom: 10px; }
+        input, button { width: 100%; padding: 10px; margin: 10px 0; }
+    </style>
+
+<style>
+    .form-control {
+        width: 80px; /* Largura para data */
+        margin: 5px 0;
+    }
+    .form-label {
+        margin-right: 70px;
+    }
+</style>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="assinador.js"></script>
+	<script src="certidao.js"></script>
+</head>
+<body>
+    
+    <h1>Obter Assinatura Digital</h1>
+    <button id="getSignatureButton">Obter Assinatura</button>
+    <pre id="result"></pre>
+
+    <script>
+        document.getElementById('getSignatureButton').addEventListener('click', function() {
+            fetch('http://localhost:2406/get_signature')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.signature) {
+                        document.getElementById('result').textContent = 'Assinatura: ' + data.signature;
+                    } else {
+                        document.getElementById('result').textContent = 'Erro: ' + data.error;
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('result').textContent = 'Erro: ' + error;
+                });
+        });
+    </script>
+
+    <div class="container">
+        <h1>Gerar Certidão Digital</h1>
+        <form id="certidaoForm">
+            <label for="nome">Nome nubente 01:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="nome">Nome nubente 02:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="numeroCertidao">Matrícula:</label>
+            <input type="number" id="numeroCertidao" name="numeroCertidao" required>
+
+
+            <label for="dados noivos">Nomes completos de solteiro, Datas de Nascimento, Naturalidade, Nacionalidade, e Filiação dos Cônjuges</label>
+            <input type="text" id="dados noivos" name="dados noivos" required>
+
+            <label for="numeroCertidao">Número da Certidão:</label>
+            <input type="number" id="numeroCertidao" name="numeroCertidao" required>
+
+            <label for="datadocasamento">Data do registro do casamento (por extenso)</label>
+            <input type="text" id="data do casamento por extenso" name="data do casamento por extenso" required>
+
+            <label for="regimedebens">Regime de Bens do Casamento</label>
+            <input type="text" id="regimedebens" name="regimedebens" required>
+
+            <label for="nomecasamento">Nome que cada um dos cônjuges passou a utilizar (Quando houver alteração)</label>
+            <input type="text" id="nomecasamento" name="nomecasamento" required>
+
+            <label for="data">Dia</label>
+            <input type="number" id="dia" name="dia" required>
+
+            <label for="averbacao">Averbações/Anotações à acrescer</label>
+            <input type="text" id="averbacao" name="averbacao" required>
+
+            <legend>Anotações de Cadastro</legend>
+            <label>
+                <input type="checkbox" name="conjuge01" value="conjuge01"> Cônjuge 01
+            </label>
+            <label>
+                <input type="checkbox" name="conjuge02" value="conjuge02"> Cônjuge 02
+            </label>
+
+            <label for="data-nascimento" class="form-label">Data do Casamento:</label>
+            <input type="date" id="data-nascimento" name="data-nascimento" class="form-control">
+            <br>
+
+
+            <label for="itens">Tipo da anotação:</label>
+            <select id="tipodeanotacao" name="tipodeanotacao" multiple size="5">
+                <option value="RG">RG</option>
+                <option value="CNH">CNH</option>
+                <option value="CTPS">CTPS</option>
+                <option value="item4">RNE</option>
+                <option value="item5">PASSAPORTE</option>
+            </select>
+            
+<button type="button" onclick="voltar()">Voltar</button>
+            
+
+            
+
+            <button type="button" onclick="gerarCertidao()">Gerar Certidão</button>
+
+            <button type="button" onclick="visualizar()">Seguir para Pré-Visualização</button>
+
+            <div id="certidaoPreview" style="display:none; margin-top: 20px;">
+                <h2>Certidão Digital</h2>
+                <div id="certidaoContent"></div>
+            </div>
+        </div>
+        </form>
+
+        <div id="certidaoPreview" style="display:none; margin-top: 20px;">
+            <h2>Certidão Digital</h2>
+            <div id="certidaoContent"></div>
+        </div>
+    </div>
+
+
+</body>
+<script src="certidao.js"></script>
+</html>
+
+

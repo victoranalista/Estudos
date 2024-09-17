@@ -1,0 +1,262 @@
+h2 {
+    font-family: "Mulish";
+    font-weight: 700;
+    font-size: 24px;
+    color: #252733;
+    position: absolute;
+    height: 44px;
+    left: 280px;
+    right: 38px;
+    top: 30px;
+    text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.22);
+}
+
+form {
+    /* Apenas para centralizar o form na página */
+    margin: 100px auto;
+    width: 400px;
+    /* Para ver as bordas do formulário */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    /*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+textarea {
+    /* Para alinhar corretamente os campos de texto de várias linhas com sua label*/
+    vertical-align: top;
+
+    /* Para dar espaço suficiente para digitar algum texto */
+    height: 5em;
+
+    /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
+    resize: vertical;
+}
+
+.button {
+    /* Para posicionar os botões para a mesma posição dos campos de texto */
+    padding-left: 90px; /* mesmo tamanho que os elementos do tipo label */
+}
+button {
+    /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
+    margin-left: .5em;
+}
+
+input:focus, textarea:focus {
+    /* Dar um pouco de destaque nos elementos ativos */
+    border-color: #000;
+}
+
+input, textarea {
+    /* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
+    font: 1em sans-serif;
+
+    /* Para dar o mesmo tamanho a todos os campo de texto */
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* Para harmonizar o look & feel das bordas nos campos de texto*/
+    border: 1px solid #999;
+}
+
+.usuario {
+    position: absolute;
+    width: 180px;
+    height: 44px;
+    left: 1176px;
+    top: 60px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: 0.2px;
+}
+
+body {
+    background-color: #F5F8FA;
+}
+
+.bemVindo {
+    position: absolute;
+    width: 981px;
+    height: 77px;
+    left: 295px;
+    top: 202px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+hr {
+    position: absolute;
+    width: 952.5px;
+    height: 0px;
+    left: 294px;
+    top: 227px;
+    border: 1px solid #617480;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: inside;
+}
+
+.mostrarJustificativa {
+    font-family: 'Mulish';
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 30px;
+    padding-left: 0px;
+    margin: 20px;
+    position: absolute;
+    width: 1120px;
+    height: 550px;
+    left: 280px;
+    top: 258px;
+    transition: all 0.3s ease-out;
+    background-color: white;
+}
+
+.aprovado {
+    color: green;
+    font-weight: bold;
+}
+
+.reprovado {
+    color: red;
+    font-weight: bold;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+h3 {
+    width: 188px;
+    height: 38px;
+    left: 312px;
+    top: 280px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+}
+
+.barraLateral {
+    margin-left: 0px;
+    background-color: #29445B;
+    list-style: none;
+    position: absolute;
+    width: 278px;
+    height: 1298px;
+    left: -24px;
+    top: 0px;
+    list-style: none;
+}
+
+#menu {
+    margin: 0;
+    padding: 0;
+    margin-left: 0px;
+    margin-top: 12px;
+    list-style: none;
+    background-color: #29445B;
+    color: white;
+    width: 278px;
+}
+
+#menuTable {
+    text-decoration: none;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    height: 60px;
+    color: #617480;
+    list-style: none;
+}
+
+#menu tr th {
+    background-color: #0e2936;
+}
+
+#menu tr td {
+    background-color: #A4A6B3;
+}
+
+#outraPagina {
+    text-decoration: none;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    height: 60px;
+    color: #617480;
+    list-style: none;
+}
+
+#paginaAtual {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: white;
+    list-style: none;
+}

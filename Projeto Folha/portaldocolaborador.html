@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portalDoColaborador.css">
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+	<script type="text/javascript">
+		jQuery(window).load(function($){
+			atualizaRelogio();
+		});
+	</script>
+    <title>Portal do Colaborador</title>
+</head>
+<body>
+    <h2>Portal do Colaborador</h2>
+    <div class="usuario">
+        Nome do Colaborador
+    </div>
+    <div class="bemVindo">Bem Vindo!</div>
+    <hr>
+    <div class="marcarPonto">
+        <div class="row">
+            <div class="marcarInfo">
+                <h3>Marcar Ponto</h3>
+                <p>Data: <output id="data"></output></p>
+                <p>Colaborador: Nome do Colaborador</p>
+            </div>
+            <div>
+                <div class="horario">
+                    <output id="hora"></output>
+                </div>
+                <button class="button" onclick="toastAlert()" id="botaoMarcar">MARCAR PONTO</button>
+            </div>
+        </div>
+    </div>
+    <div class="barraLateral">
+        <div>
+            <img src="imagens/meeting.png" align="right" width="250" height="290">
+        </div>
+        <table cellpadding="15px" id="menu">
+            <thead>
+                <tr>
+                    <th><a id="gestaoDePonto">Gestão de Ponto</a></th>
+                </tr>
+            </thead>
+            <tr>
+                <td><a id="paginaAtual"><i class='far fa-address-card' style='font-size:24px'></i><img src="imagens/employees.png" align="center" width="25" height="25">   Marcar o Ponto</a></td>
+            </tr>
+            <tr>
+                <td><a id="outraPagina" href="justificarPonto.html"></i><img src="imagens/employees.png" align="center" width="25" height="25">   Justificar o Ponto</a></td>
+            </tr>
+            <tr>
+                <td><a id="outraPagina" href="folhaDePonto.html"></i><img src="imagens/employees.png" align="center" width="25" height="25">   Folha Mensal</a></td>
+            </tr>
+    </div>
+
+    <!-- The actual snackbar -->
+    <div id="snackbar">Ponto marcado: <span id="horaToast"></span></div>
+</body>
+<script>
+    function atualizaRelogio() {
+        var momentoAtual = new Date();
+
+        var vhora = momentoAtual.getHours();
+        var vminuto = momentoAtual.getMinutes();
+        var vsegundo = momentoAtual.getSeconds();
+
+        var vdia = momentoAtual.getDate();
+        var vmes = momentoAtual.getMonth() + 1;
+        var vano = momentoAtual.getFullYear();
+
+        if (vdia < 10) { vdia = "0" + vdia; }
+        if (vmes < 10) { vmes = "0" + vmes; }
+        if (vhora < 10) { vhora = "0" + vhora; }
+        if (vminuto < 10) { vminuto = "0" + vminuto; }
+        if (vsegundo < 10) { vsegundo = "0" + vsegundo; }
+
+        dataFormat = vdia + " / " + vmes + " / " + vano;
+        horaFormat = vhora + " : " + vminuto + " : " + vsegundo;
+
+        document.getElementById("data").innerHTML = dataFormat;
+        document.getElementById("hora").innerHTML = horaFormat;
+
+        setTimeout("atualizaRelogio()", 1000);
+    }
+
+    function toastAlert() {
+        var x = document.getElementById("snackbar");
+        const date = new Date().toLocaleString();
+        document.querySelector('#horaToast').textContent = date;
+
+        x.className = "show";
+        setTimeout(function(){x.className = x.className.replace("show", ""); }, 3000);
+    }
+</script>
+</html>
